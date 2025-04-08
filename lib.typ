@@ -67,18 +67,18 @@
   info = (
     title: ("基于 Typst 编写的", "华东师范大学学位论文"),
     title-en: "Typst Thesis Template for\nEast China Normal University",
-    grade: "20XX",
+    grade: " ",
     student-id: "1234567890",
-    author: "张三",
-    author-en: "Zhang San",
-    department: "某学院",
-    department-en: "XX Department",
-    major: "某专业",
-    major-en: "XX Major",
-    field: "某方向",
-    field-en: "XX Field",
-    supervisor: ("李四", "教授"),
-    supervisor-en: ("Professor", "Li Si"),
+    author: " ",
+    author-en: " ",
+    department: " ",
+    department-en: " ",
+    major: " ",
+    major-en: " ",
+    field: " ",
+    field-en: " ",
+    supervisor: (" ", " "),
+    supervisor-en: (" ", " "),
     supervisor-ii: (),
     supervisor-ii-en: (),
     submit-date: datetime.today(),
@@ -351,6 +351,10 @@
         twoside: twoside,
         ..args,
       )
+    },
+
+    supervisor: (..args) => {
+      info.supervisor.at(0)+info.supervisor.at(1)
     },
   )
 }
